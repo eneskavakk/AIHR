@@ -1,6 +1,6 @@
 # AIHR AI Service
 
-FastAPI tabanlı lokal AI servisidir. Sprint 01 kapsamında yalnızca servis iskeleti ve health endpoint'i hazırlanmıştır.
+FastAPI tabanlı lokal AI servisidir. Health kontrolü, PDF metin çıkarma ve Ollama destekli aday analizi endpoint'lerini sağlar.
 
 ## Kurulum
 

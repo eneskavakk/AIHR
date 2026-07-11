@@ -80,8 +80,6 @@ ai-service/
 database/
   migrations/            Veritabani semasi
   seeders/               Lokal admin kullanicisi
-
-Sprints/                 MVP sprint planlari
 ```
 
 ## Kurulum
