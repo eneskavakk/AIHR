@@ -86,7 +86,7 @@ database/
 
 ### Gereksinimler
 
-- PHP 8.3+
+- PHP 8.2+ (`composer.json` ile uyumlu)
 - Composer
 - Node.js 20+
 - Python 3.11+
