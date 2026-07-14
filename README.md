@@ -171,7 +171,7 @@ AI_SERVICE_OLLAMA_FALLBACK_MODEL=llama3.1:8b
 AI_SERVICE_API_TOKEN=
 ```
 
-`AI_SERVICE_TOKEN` ve `AI_SERVICE_API_TOKEN` ayni deger olmalidir. Bos birakilirsa lokal gelistirme modunda AI endpoint'leri tokensiz calisir.
+Laravel tarafinda `AI_SERVICE_TOKEN`, FastAPI tarafinda `AI_SERVICE_API_TOKEN` kullanilir; ikisi de ayni gizli degeri tasimalidir. Bos birakilirsa lokal gelistirme modunda AI endpoint'leri tokensiz calisir.
 
 ## Lokal Calistirma
 
