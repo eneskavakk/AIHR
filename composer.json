@@ -1,9 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "eneskavakk/aihr",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "AIHR recruitment platform built with Laravel and Filament.",
+    "keywords": ["aihr", "hr", "recruitment", "laravel", "filament"],
     "license": "MIT",
     "require": {
         "php": "^8.2",
