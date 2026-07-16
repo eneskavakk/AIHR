@@ -103,6 +103,18 @@ php artisan migrate
 php artisan db:seed
 ```
 
+Alternatif olarak repo icindeki yardimci Composer komutlarini kullanabilirsin:
+
+```bash
+composer setup
+composer dev
+composer test
+```
+
+`composer setup`, bagimlilik kurulumunu, `.env` kopyalamayi, anahtar uretimini, migrasyonlari ve frontend build adimini tek seferde calistirir.
+`composer dev` Laravel sunucusu, queue listener, log izleyici ve Vite'i birlikte acar.
+`composer test` ise test oncesi config temizligi yapip PHPUnit calistirir.
+
 Varsayilan lokal admin:
 
 ```text
