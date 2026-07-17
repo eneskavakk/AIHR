@@ -124,6 +124,8 @@ Password: password
 
 ### Frontend assetleri
 
+`composer setup` frontend bagimliliklarini kurup build aldigi icin, asagidaki adimlar ayri bir frontend kurulumu yaptiginda gereklidir:
+
 ```bash
 npm install
 npm run build
