@@ -12,6 +12,19 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
+## Ortam Degiskenleri
+
+Servis, `AI_SERVICE_` on ekiyle okunan su ayarlari kullanir:
+
+- `AI_SERVICE_OLLAMA_BASE_URL=http://127.0.0.1:11434`
+- `AI_SERVICE_OLLAMA_MODEL=qwen2.5:7b`
+- `AI_SERVICE_OLLAMA_FALLBACK_MODEL=llama3.1:8b`
+- `AI_SERVICE_OLLAMA_TIMEOUT_SECONDS=120`
+- `AI_SERVICE_ANALYSIS_RETRY_COUNT=1`
+- `AI_SERVICE_API_TOKEN=`
+
+`health` endpoint'i aciktir; `parse-cv` ve `analyze-candidate` endpoint'leri `AI_SERVICE_API_TOKEN` tanimliyken Bearer token ile korunur.
+
 ## Çalıştırma
 
 ```bash
