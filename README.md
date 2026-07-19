@@ -11,7 +11,7 @@ Platformun ana hedefi klasik anahtar kelime filtrelerinin otesine gecerek adayla
 - PDF'ten ham ve temizlenmis metin cikarma
 - Aday-CV ve is ilani eslesme analizi
 - 0-100 arasi uygunluk skoru uretme
-- Aday seviyesi belirleme: Weak, Partial, Strong, Excellent Match
+- Aday seviyesi belirleme: Weak Match, Partial Match, Strong Match, Excellent Match
 - Eksik ve eslesen yetenekleri listeleme
 - Deneyim ve egitim uyumunu aciklama
 - Analiz gecmisi saklama
