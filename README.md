@@ -147,6 +147,8 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
+Servisin ayrintili kurulum ve API ornekleri icin [ai-service/README.md](ai-service/README.md) dosyasina bak.
+
 ### Ollama modeli
 
 ```bash
