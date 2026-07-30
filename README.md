@@ -1,6 +1,6 @@
 # AIHR
 
-AIHR, insan kaynaklari ekipleri icin gelistirilen AI destekli CV ve is ilani eslestirme platformudur. Sistem bir chatbot degildir; is ilanlarini ve PDF formatindaki CV'leri analiz ederek aciklanabilir aday uygunluk skorlari, eksik yetenekler, guclu yonler ve okunabilir IK raporlari uretir.
+AIHR, insan kaynakları ekipleri için geliştirilen AI destekli CV ve iş ilanı eşleştirme platformudur. Sistem bir chatbot değildir; iş ilanlarını ve PDF formatındaki CV'leri analiz ederek açıklanabilir aday uygunluk skorları, eksik yetenekler, güçlü yönler ve okunabilir İK raporları üretir.
 
 Platformun ana hedefi klasik anahtar kelime filtrelerinin otesine gecerek adaylari baglamsal olarak degerlendirmek, ancak nihai karari her zaman insan kullaniciya birakmaktir.
 
@@ -44,7 +44,7 @@ Pydantic JSON Validation
 Database Storage + HR Dashboard
 ```
 
-## Teknoloji Yigini
+## Teknoloji Yığını
 
 - Laravel 12
 - FilamentPHP
@@ -147,7 +147,7 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Servisin ayrintili kurulum ve API ornekleri icin [ai-service/README.md](ai-service/README.md) dosyasina bak.
+Servisin ayrıntılı kurulum ve API örnekleri için [ai-service/README.md](ai-service/README.md) dosyasına bak.
 
 ### Ollama modeli
 
