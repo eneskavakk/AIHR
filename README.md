@@ -2,20 +2,20 @@
 
 AIHR, insan kaynakları ekipleri için geliştirilen AI destekli CV ve iş ilanı eşleştirme platformudur. Sistem bir chatbot değildir; iş ilanlarını ve PDF formatındaki CV'leri analiz ederek açıklanabilir aday uygunluk skorları, eksik yetenekler, güçlü yönler ve okunabilir İK raporları üretir.
 
-Platformun ana hedefi klasik anahtar kelime filtrelerinin otesine gecerek adaylari baglamsal olarak degerlendirmek, ancak nihai karari her zaman insan kullaniciya birakmaktir.
+Platformun ana hedefi klasik anahtar kelime filtrelerinin ötesine geçerek adayları bağlamsal olarak değerlendirmek, ancak nihai kararı her zaman insan kullanıcıya bırakmaktır.
 
 ## Neler Yapar?
 
-- Is ilani olusturma ve yonetme
+- İş ilanı oluşturma ve yönetme
 - PDF CV yukleme
 - PDF'ten ham ve temizlenmis metin cikarma
-- Aday-CV ve is ilani eslesme analizi
-- 0-100 arasi uygunluk skoru uretme
+- Aday-CV ve iş ilanı eşleşme analizi
+- 0-100 arası uygunluk skoru üretme
 - Aday seviyesi belirleme: Weak Match, Partial Match, Strong Match, Excellent Match
 - Eksik ve eslesen yetenekleri listeleme
-- Deneyim ve egitim uyumunu aciklama
+- Deneyim ve eğitim uyumunu açıklama
 - Analiz gecmisi saklama
-- Filament admin panelinde aday raporu ve siralama sunma
+- Filament admin panelinde aday raporu ve sıralama sunma
 
 ## Mimari
 

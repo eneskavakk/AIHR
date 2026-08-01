@@ -14,7 +14,7 @@ cp .env.example .env
 
 ## Ortam Degiskenleri
 
-Servis, `AI_SERVICE_` on ekiyle okunan şu ayarları kullanır:
+Servis, `AI_SERVICE_` ön ekiyle okunan şu ayarları kullanır:
 
 - `AI_SERVICE_OLLAMA_BASE_URL=http://127.0.0.1:11434`
 - `AI_SERVICE_OLLAMA_MODEL=qwen2.5:7b`
@@ -23,7 +23,7 @@ Servis, `AI_SERVICE_` on ekiyle okunan şu ayarları kullanır:
 - `AI_SERVICE_ANALYSIS_RETRY_COUNT=1`
 - `AI_SERVICE_API_TOKEN=`
 
-`health` endpoint'i aciktir; `AI_SERVICE_API_TOKEN` tanimliyse `parse-cv` ve `analyze-candidate` endpoint'leri Bearer token ister, bos birakilirsa gelistirme modunda acik kalir.
+`health` endpoint'i açıktır; `AI_SERVICE_API_TOKEN` tanımlıysa `parse-cv` ve `analyze-candidate` endpoint'leri Bearer token ister, boş bırakılırsa geliştirme modunda açık kalır.
 
 ## Çalıştırma
 
