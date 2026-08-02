@@ -7,12 +7,12 @@ Platformun ana hedefi klasik anahtar kelime filtrelerinin ötesine geçerek aday
 ## Neler Yapar?
 
 - İş ilanı oluşturma ve yönetme
-- PDF CV yukleme
-- PDF'ten ham ve temizlenmis metin cikarma
+- PDF CV yükleme
+- PDF'ten ham ve temizlenmiş metin çıkarma
 - Aday-CV ve iş ilanı eşleşme analizi
 - 0-100 arası uygunluk skoru üretme
 - Aday seviyesi belirleme: Weak Match, Partial Match, Strong Match, Excellent Match
-- Eksik ve eslesen yetenekleri listeleme
+- Eksik ve eşleşen yetenekleri listeleme
 - Deneyim ve eğitim uyumunu açıklama
 - Analiz gecmisi saklama
 - Filament admin panelinde aday raporu ve sıralama sunma
