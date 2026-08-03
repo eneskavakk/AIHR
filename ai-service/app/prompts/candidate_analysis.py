@@ -233,7 +233,7 @@ SADECE AŞAĞIDAKİ JSON FORMATINDA CEVAP VER
 
 
 def build_json_repair_prompt(raw_response: str, validation_error: str) -> str:
-    return f"""Asagidaki LLM yaniti gecersiz veya semaya uymuyor.
+    return f"""Aşağıdaki LLM yanıtı geçersiz veya şemaya uymuyor.
 Sadece duzeltilmis valid JSON dondur. Markdown veya aciklama yazma.
 
 Zorunlu JSON semasi:

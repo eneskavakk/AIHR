@@ -14,7 +14,7 @@ Platformun ana hedefi klasik anahtar kelime filtrelerinin ötesine geçerek aday
 - Aday seviyesi belirleme: Weak Match, Partial Match, Strong Match, Excellent Match
 - Eksik ve eşleşen yetenekleri listeleme
 - Deneyim ve eğitim uyumunu açıklama
-- Analiz gecmisi saklama
+- Analiz geçmişi saklama
 - Filament admin panelinde aday raporu ve sıralama sunma
 
 ## Mimari
@@ -341,7 +341,7 @@ Bu MVP asagidaki temel akislar icin hazirlanmistir:
 - Uygunluk skoru
 - Aday raporu
 - Aday siralama
-- Analiz gecmisi
+- Analiz geçmişi
 
 ## Yol Haritasi
 
