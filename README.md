@@ -112,7 +112,7 @@ composer test
 ```
 
 `composer setup`, bagimlilik kurulumunu, `.env` kopyalamayi, anahtar uretimini, migrasyonlari ve frontend build adimini tek seferde calistirir.
-`composer dev` Laravel sunucusu, queue listener, Pail log akisi ve Vite'i birlikte acar.
+`composer dev` Laravel sunucusu, `php artisan queue:listen`, Pail log akışı ve Vite'i birlikte açar. Bu sayede geliştirme sırasında arka plan işleri ve log akışı tek terminal grubunda izlenebilir.
 `composer test` ise test oncesi config temizligi yapip PHPUnit calistirir.
 
 Varsayilan lokal admin:
