@@ -50,7 +50,7 @@ Database Storage + HR Dashboard
 - FilamentPHP
 - TailwindCSS
 - MySQL veya lokal gelistirme icin SQLite
-- Redis veya database queue
+- Redis queue; SQLite ile calisacaksan `QUEUE_CONNECTION=database` kullan
 - Python + FastAPI
 - Pydantic
 - PyMuPDF
