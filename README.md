@@ -49,8 +49,8 @@ Database Storage + HR Dashboard
 - Laravel 12
 - FilamentPHP
 - TailwindCSS
-- MySQL veya lokal gelistirme icin SQLite
-- Redis queue; SQLite ile calisacaksan `QUEUE_CONNECTION=database` kullan
+- MySQL veya lokal geliştirme için SQLite
+- Redis queue; SQLite ile çalışacaksan `QUEUE_CONNECTION=database` kullan
 - Python + FastAPI
 - Pydantic
 - PyMuPDF
@@ -111,11 +111,11 @@ composer dev
 composer test
 ```
 
-`composer setup`, bagimlilik kurulumunu, `.env` kopyalamayi, anahtar uretimini, migrasyonlari ve frontend build adimini tek seferde calistirir.
+`composer setup`, bağımlılık kurulumunu, `.env` kopyalamayı, anahtar üretimini, migrasyonları ve frontend build adımını tek seferde çalıştırır.
 `composer dev` Laravel sunucusu, `php artisan queue:listen`, Pail log akışı ve Vite'i birlikte açar. Bu sayede geliştirme sırasında arka plan işleri ve log akışı tek terminal grubunda izlenebilir.
-`composer test` ise test oncesi config temizligi yapip PHPUnit calistirir.
+`composer test` ise test öncesi config temizliği yapıp PHPUnit çalıştırır.
 
-Varsayilan lokal admin:
+Varsayılan lokal admin:
 
 ```text
 Email: admin@example.com
@@ -131,7 +131,7 @@ npm install
 npm run build
 ```
 
-Gelistirme sirasinda Vite kullanmak icin:
+Geliştirme sırasında Vite kullanmak için:
 
 ```bash
 npm run dev
@@ -164,9 +164,9 @@ ollama pull llama3.1:8b
 
 ## Ortam Degiskenleri
 
-Gercek degerler `.env` ve `ai-service/.env` dosyalarinda tutulmalidir. Bu dosyalar git'e dahil edilmez.
+Gerçek değerler `.env` ve `ai-service/.env` dosyalarında tutulmalıdır. Bu dosyalar git'e dahil edilmez.
 
-Laravel tarafinda onemli ayarlar:
+Laravel tarafında önemli ayarlar:
 
 ```dotenv
 AI_SERVICE_URL=http://127.0.0.1:8001
@@ -179,7 +179,7 @@ MAX_CV_UPLOAD_SIZE_KB=5120
 AI_ANALYSIS_RETRY_COUNT=1
 ```
 
-FastAPI tarafinda onemli ayarlar:
+FastAPI tarafında önemli ayarlar:
 
 ```dotenv
 AI_SERVICE_OLLAMA_BASE_URL=http://127.0.0.1:11434
@@ -190,7 +190,7 @@ AI_SERVICE_ANALYSIS_RETRY_COUNT=1
 AI_SERVICE_API_TOKEN=
 ```
 
-Laravel tarafinda `AI_SERVICE_TOKEN`, FastAPI tarafinda `AI_SERVICE_API_TOKEN` kullanilir; ikisi de ayni gizli degeri tasimalidir. Bos birakilirsa lokal gelistirme modunda AI endpoint'leri tokensiz calisir.
+Laravel tarafında `AI_SERVICE_TOKEN`, FastAPI tarafında `AI_SERVICE_API_TOKEN` kullanılır; ikisi de aynı gizli değeri taşımalıdır. Boş bırakılırsa lokal geliştirme modunda AI endpoint'leri tokensiz çalışır.
 
 ## Lokal Calistirma
 
