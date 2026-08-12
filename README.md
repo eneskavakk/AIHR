@@ -148,7 +148,7 @@ cp .env.example .env
 ```
 
 Servisin ayrıntılı kurulum ve API örnekleri için [ai-service/README.md](ai-service/README.md) dosyasına bak.
-`AI_SERVICE_URL` degerini FastAPI servisinin calistigi base URL ile ayni tut; yerel gelistirmede bu genelde `http://127.0.0.1:8001` olur.
+`AI_SERVICE_URL` değerini FastAPI servisinin çalıştığı base URL ile aynı tut; yerel geliştirmede bu genelde `http://127.0.0.1:8001` olur.
 
 ### Ollama modeli
 
@@ -162,7 +162,7 @@ Opsiyonel fallback:
 ollama pull llama3.1:8b
 ```
 
-## Ortam Degiskenleri
+## Ortam Değişkenleri
 
 Gerçek değerler `.env` ve `ai-service/.env` dosyalarında tutulmalıdır. Bu dosyalar git'e dahil edilmez.
 
