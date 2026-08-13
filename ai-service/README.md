@@ -12,7 +12,7 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-## Ortam Degiskenleri
+## Ortam Değişkenleri
 
 Servis, `AI_SERVICE_` ön ekiyle okunan şu ayarları kullanır:
 
@@ -24,6 +24,7 @@ Servis, `AI_SERVICE_` ön ekiyle okunan şu ayarları kullanır:
 - `AI_SERVICE_API_TOKEN=`
 
 `health` endpoint'i açıktır; `AI_SERVICE_API_TOKEN` tanımlıysa `parse-cv` ve `analyze-candidate` endpoint'leri Bearer token ister, boş bırakılırsa geliştirme modunda açık kalır.
+Laravel istemcisiyle birlikte kullanıyorsan, buradaki `AI_SERVICE_API_TOKEN` değeri Laravel tarafındaki `AI_SERVICE_TOKEN` ile aynı olmalıdır.
 
 ## Çalıştırma
 
