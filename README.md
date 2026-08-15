@@ -267,18 +267,18 @@ curl -X POST http://127.0.0.1:8001/analyze-candidate \
   }'
 ```
 
-## AI Cikti Ilkeleri
+## AI Çıktı İlkeleri
 
-Model ciktisi her zaman:
+Model çıktısı her zaman:
 
-- Gecerli JSON olmalidir
-- Markdown icermemelidir
-- CV'de olmayan deneyim veya teknoloji uydurmamalidir
-- Belirsiz bilgiler icin `Belirtilmemis` kullanmalidir
-- Profesyonel IK diliyle, kisa ve acik yazilmalidir
-- Pydantic dogrulamasindan gecmeden kaydedilmemelidir
+- Geçerli JSON olmalıdır
+- Markdown içermemelidir
+- CV'de olmayan deneyim veya teknoloji uydurmamalıdır
+- Belirsiz bilgiler için `Belirtilmemis` kullanmalıdır
+- Profesyonel IK diliyle, kısa ve açık yazılmalıdır
+- Pydantic doğrulamasından geçmeden kaydedilmemelidir
 
-Beklenen analiz formati:
+Beklenen analiz formatı:
 
 ```json
 {
@@ -305,14 +305,14 @@ Beklenen analiz formati:
 }
 ```
 
-## Guvenlik Notlari
+## Güvenlik Notları
 
-- `.env`, `ai-service/.env`, API tokenlari, veritabani dosyalari ve yuklenen CV'ler git'e dahil edilmez.
+- `.env`, `ai-service/.env`, API tokenları, veritabanı dosyaları ve yüklenen CV'ler git'e dahil edilmez.
 - Sadece PDF yuklemeleri kabul edilmelidir.
-- CV dosya boyutu `MAX_CV_UPLOAD_SIZE_KB` ile sinirlanir.
-- FastAPI parse ve analiz endpoint'leri production ortaminda Bearer token ile korunmalidir.
-- Aday verileri ve CV icerikleri hassas veri olarak ele alinmalidir.
-- Raw LLM ciktisi dogrulanmadan kullanilmamalidir.
+- CV dosya boyutu `MAX_CV_UPLOAD_SIZE_KB` ile sınırlandırılır.
+- FastAPI parse ve analiz endpoint'leri production ortamında Bearer token ile korunmalıdır.
+- Aday verileri ve CV içerikleri hassas veri olarak ele alınmalıdır.
+- Raw LLM çıktısı doğrulanmadan kullanılmamalıdır.
 
 ## Testler
 
