@@ -55,17 +55,17 @@ Database Storage + HR Dashboard
 - Pydantic
 - PyMuPDF
 - Ollama
-- Varsayilan model: `qwen2.5:7b`
+- Varsayılan model: `qwen2.5:7b`
 - Alternatif model: `llama3.1:8b`
 
-## Proje Yapisi
+## Proje Yapısı
 
 ```text
 app/
-  Data/                  DTO siniflari
-  Enums/                 Domain enum'lari
-  Filament/              Admin panel kaynaklari, sayfalari ve widget'lari
-  Jobs/                  Queue tabanli analiz isleri
+  Data/                  DTO sınıfları
+  Enums/                 Domain enum'ları
+  Filament/              Admin panel kaynakları, sayfaları ve widget'ları
+  Jobs/                  Queue tabanlı analiz işleri
   Models/                Laravel modelleri
   Services/              Laravel servis katmani
 
@@ -91,7 +91,7 @@ database/
 - Node.js 20+
 - Python 3.11+
 - Ollama
-- MySQL ve Redis, veya hizli lokal gelistirme icin SQLite + database queue
+- MySQL ve Redis, veya hızlı lokal geliştirme için SQLite + database queue
 
 ### Laravel
 
@@ -124,7 +124,7 @@ Password: password
 
 ### Frontend assetleri
 
-`composer setup` frontend bagimliliklarini kurup build aldigi icin, asagidaki adimlar ayri bir frontend kurulumu yaptiginda gereklidir:
+`composer setup` frontend bağımlılıklarını kurup build aldığı için, aşağıdaki adımlar ayrı bir frontend kurulumu yaptığında gereklidir:
 
 ```bash
 npm install
@@ -332,34 +332,34 @@ pytest
 
 ## MVP Durumu
 
-Bu MVP asagidaki temel akislar icin hazirlanmistir:
+Bu MVP aşağıdaki temel akışlar için hazırlanmıştır:
 
-- Is ilani kaydi
-- CV yukleme
-- PDF metni ayristirma
+- İş ilanı kaydı
+- CV yükleme
+- PDF metni ayrıştırma
 - AI destekli aday analizi
 - Uygunluk skoru
 - Aday raporu
 - Aday siralama
 - Analiz geçmişi
 
-## Yol Haritasi
+## Yol Haritası
 
-Phase 2:
+2. Aşama:
 
-- Toplu CV isleme
-- AI destekli mulakat sorulari
-- Cok dilli analiz destegi
+- Toplu CV işleme
+- AI destekli mülakat soruları
+- Çok dilli analiz desteği
 - Vector search / RAG
 - Fine-tuned HR modeli
 
-Phase 3:
+3. Aşama:
 
-- ATS entegrasyonlari
-- Takim is birligi
+- ATS entegrasyonları
+- Takım iş birliği
 - Hiring pipeline otomasyonu
 - Recruitment analytics dashboard
 
 ## Lisans
 
-Bu proje su an ozel gelistirme asamasindadir.
+Bu proje şu an özel geliştirme aşamasındadır.
