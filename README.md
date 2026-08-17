@@ -192,7 +192,7 @@ AI_SERVICE_API_TOKEN=
 
 Laravel tarafında `AI_SERVICE_TOKEN`, FastAPI tarafında `AI_SERVICE_API_TOKEN` kullanılır; ikisi de aynı gizli değeri taşımalıdır. Boş bırakılırsa lokal geliştirme modunda AI endpoint'leri tokensiz çalışır.
 
-## Lokal Calistirma
+## Lokal Çalıştırma
 
 Laravel:
 
@@ -220,13 +220,13 @@ Queue worker:
 php artisan queue:work database --timeout=240 --tries=1
 ```
 
-Redis queue kullaniyorsaniz:
+Redis queue kullanıyorsanız:
 
 ```bash
 php artisan queue:work redis --timeout=240 --tries=1
 ```
 
-MySQL ve Redis'i Docker ile baslatmak icin:
+MySQL ve Redis'i Docker ile başlatmak için:
 
 ```bash
 docker compose up -d mysql redis
