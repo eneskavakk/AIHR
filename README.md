@@ -74,12 +74,12 @@ ai-service/
   app/core/              Ayarlar ve auth
   app/parsing/           PDF parsing ve text cleaning
   app/prompts/           Versiyonlu promptlar
-  app/schemas/           Pydantic semalari
+  app/schemas/           Pydantic şemaları
   app/services/          Ollama, JSON parser ve analiz servisleri
 
 database/
-  migrations/            Veritabani semasi
-  seeders/               Lokal admin kullanicisi
+  migrations/            Veritabanı şeması
+  seeders/               Lokal admin kullanıcısı
 ```
 
 ## Kurulum
@@ -112,7 +112,7 @@ composer test
 ```
 
 `composer setup`, bağımlılık kurulumunu, `.env` kopyalamayı, anahtar üretimini, migrasyonları ve frontend build adımını tek seferde çalıştırır.
-`composer dev` Laravel sunucusu, `php artisan queue:listen`, Pail log akışı ve Vite'i birlikte açar. Bu sayede geliştirme sırasında arka plan işleri ve log akışı tek terminal grubunda izlenebilir.
+`composer dev` Laravel sunucusu, `php artisan queue:listen --tries=1 --timeout=0`, Pail log akışı ve Vite'i birlikte açar. Bu sayede geliştirme sırasında arka plan işleri ve log akışı tek terminal grubunda izlenebilir.
 `composer test` ise test öncesi config temizliği yapıp PHPUnit çalıştırır.
 
 Varsayılan lokal admin:
@@ -308,7 +308,7 @@ Beklenen analiz formatı:
 ## Güvenlik Notları
 
 - `.env`, `ai-service/.env`, API tokenları, veritabanı dosyaları ve yüklenen CV'ler git'e dahil edilmez.
-- Sadece PDF yuklemeleri kabul edilmelidir.
+- Sadece PDF yüklemeleri kabul edilmelidir.
 - CV dosya boyutu `MAX_CV_UPLOAD_SIZE_KB` ile sınırlandırılır.
 - FastAPI parse ve analiz endpoint'leri production ortamında Bearer token ile korunmalıdır.
 - Aday verileri ve CV içerikleri hassas veri olarak ele alınmalıdır.
@@ -340,7 +340,7 @@ Bu MVP aşağıdaki temel akışlar için hazırlanmıştır:
 - AI destekli aday analizi
 - Uygunluk skoru
 - Aday raporu
-- Aday siralama
+- Aday sıralama
 - Analiz geçmişi
 
 ## Yol Haritası
