@@ -67,7 +67,7 @@ app/
   Filament/              Admin panel kaynakları, sayfaları ve widget'ları
   Jobs/                  Queue tabanlı analiz işleri
   Models/                Laravel modelleri
-  Services/              Laravel servis katmani
+  Services/              Laravel servis katmanı
 
 ai-service/
   app/api/routes/        FastAPI endpoint'leri
@@ -103,7 +103,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-Alternatif olarak repo icindeki yardimci Composer komutlarini kullanabilirsin:
+Alternatif olarak repo içindeki yardımcı Composer komutlarını kullanabilirsin:
 
 ```bash
 composer setup
