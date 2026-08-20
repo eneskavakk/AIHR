@@ -274,7 +274,7 @@ Model çıktısı her zaman:
 - Geçerli JSON olmalıdır
 - Markdown içermemelidir
 - CV'de olmayan deneyim veya teknoloji uydurmamalıdır
-- Belirsiz bilgiler için `Belirtilmemis` kullanmalıdır
+- Belirsiz bilgiler için `Belirtilmemiş` kullanmalıdır
 - Profesyonel IK diliyle, kısa ve açık yazılmalıdır
 - Pydantic doğrulamasından geçmeden kaydedilmemelidir
 
