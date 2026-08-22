@@ -124,7 +124,7 @@ Password: password
 
 ### Frontend assetleri
 
-`composer setup` frontend bağımlılıklarını kurup build aldığı için, aşağıdaki adımlar ayrı bir frontend kurulumu yaptığında gereklidir:
+`composer setup` frontend bağımlılıklarını da kurup build aldığı için, normal Laravel kurulumu için aşağıdaki adımlar ayrıca gerekmez. Yalnızca frontend tarafında çalışıyorsan veya `composer setup` kullanmadıysan bunları çalıştır:
 
 ```bash
 npm install
