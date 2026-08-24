@@ -95,7 +95,7 @@ curl -X POST http://127.0.0.1:8001/analyze-candidate \
 
 Analiz akışı:
 
-- Prompt version: `candidate-analysis-v1`
+- Prompt version: `candidate-analysis-v4`
 - Ollama model: `AI_SERVICE_OLLAMA_MODEL`
 - Çıktı önce JSON olarak parse edilir.
 - Pydantic şeması valid değilse repair promptu çalışır.
