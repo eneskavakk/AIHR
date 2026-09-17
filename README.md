@@ -177,7 +177,11 @@ OLLAMA_MODEL=qwen2.5:7b
 OLLAMA_FALLBACK_MODEL=llama3.1:8b
 MAX_CV_UPLOAD_SIZE_KB=5120
 AI_ANALYSIS_RETRY_COUNT=1
+DB_QUEUE_RETRY_AFTER=330
+REDIS_QUEUE_RETRY_AFTER=330
 ```
+
+`ProcessCandidateAnalysisJob` en fazla 300 saniye çalışabildiği için queue bağlantısının `retry_after` değeri bundan uzun tutulmalıdır. Örnek değer olan 330 saniye, uzun süren analizlerin tamamlanmadan yeniden kuyruğa alınmasını önler.
 
 FastAPI tarafında önemli ayarlar:
 
@@ -217,13 +221,13 @@ uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
 Queue worker:
 
 ```bash
-php artisan queue:work database --timeout=240 --tries=1
+php artisan queue:work database --timeout=300 --tries=1
 ```
 
 Redis queue kullanıyorsanız:
 
 ```bash
-php artisan queue:work redis --timeout=240 --tries=1
+php artisan queue:work redis --timeout=300 --tries=1
 ```
 
 MySQL ve Redis'i Docker ile başlatmak için:
