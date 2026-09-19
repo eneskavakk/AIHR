@@ -279,7 +279,7 @@ Model çıktısı her zaman:
 - Markdown içermemelidir
 - CV'de olmayan deneyim veya teknoloji uydurmamalıdır
 - Belirsiz bilgiler için `Belirtilmemiş` kullanmalıdır
-- Profesyonel IK diliyle, kısa ve açık yazılmalıdır
+- Profesyonel İK diliyle, kısa ve açık yazılmalıdır
 - Pydantic doğrulamasından geçmeden kaydedilmemelidir
 
 Beklenen analiz formatı:
