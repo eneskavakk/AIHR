@@ -238,6 +238,8 @@ docker compose up -d mysql redis
 
 ## API Kontrolleri
 
+`AI_SERVICE_API_TOKEN` tanımlıysa aşağıdaki `parse-cv` ve `analyze-candidate` isteklerine `-H "Authorization: Bearer $AI_SERVICE_API_TOKEN"` başlığını ekle. Health endpoint'i kimlik doğrulama gerektirmez.
+
 Health check:
 
 ```bash

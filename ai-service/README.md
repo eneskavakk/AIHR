@@ -50,6 +50,8 @@ Beklenen yanıt:
 
 ## PDF Parse
 
+`AI_SERVICE_API_TOKEN` tanımlıysa bu isteğe `-H "Authorization: Bearer $AI_SERVICE_API_TOKEN"` başlığını ekle.
+
 ```bash
 curl -X POST http://127.0.0.1:8001/parse-cv \
   -F "file=@/path/to/cv.pdf;type=application/pdf"
@@ -74,6 +76,8 @@ Notlar:
 - Cleaning layer ham metinden ayrı çalışır; CV'de olmayan bilgi üretmez.
 
 ## Candidate Analysis
+
+`AI_SERVICE_API_TOKEN` tanımlıysa bu isteğe `-H "Authorization: Bearer $AI_SERVICE_API_TOKEN"` başlığını ekle.
 
 ```bash
 curl -X POST http://127.0.0.1:8001/analyze-candidate \
