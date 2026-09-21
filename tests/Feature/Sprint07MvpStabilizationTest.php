@@ -245,4 +245,10 @@ class Sprint07MvpStabilizationTest extends TestCase
     {
         $this->assertArrayHasKey('ai_service_token', config('aihr'));
     }
+
+    public function test_queue_retry_windows_exceed_analysis_job_timeout(): void
+    {
+        $this->assertGreaterThan(300, config('queue.connections.database.retry_after'));
+        $this->assertGreaterThan(300, config('queue.connections.redis.retry_after'));
+    }
 }
