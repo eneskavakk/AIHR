@@ -88,7 +88,7 @@ database/
 
 - PHP 8.2+ (`composer.json` ile uyumlu)
 - Composer
-- Node.js 20+
+- Node.js 20.19+ veya 22.12+
 - Python 3.11+
 - Ollama
 - MySQL ve Redis, veya hızlı lokal geliştirme için SQLite + database queue
