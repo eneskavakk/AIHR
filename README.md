@@ -8,7 +8,7 @@ Platformun ana hedefi klasik anahtar kelime filtrelerinin ötesine geçerek aday
 
 - İş ilanı oluşturma ve yönetme
 - PDF CV yükleme
-- PDF'ten ham ve temizlenmiş metin çıkarma
+- PDF'den ham ve temizlenmiş metin çıkarma
 - Aday-CV ve iş ilanı eşleşme analizi
 - 0-100 arası uygunluk skoru üretme
 - Aday seviyesi belirleme: Weak Match, Partial Match, Strong Match, Excellent Match
