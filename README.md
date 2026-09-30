@@ -115,6 +115,20 @@ composer test
 `composer dev` Laravel sunucusu, `php artisan queue:listen --tries=1 --timeout=0`, Pail log akışı ve Vite'i birlikte açar. Bu sayede geliştirme sırasında arka plan işleri ve log akışı tek terminal grubunda izlenebilir.
 `composer test` ise test öncesi config temizliği yapıp PHPUnit çalıştırır.
 
+MySQL ve Redis kurmadan SQLite ile çalışmak için `.env` dosyasında şu ayarları kullan ve veritabanı dosyasını migrasyondan önce oluştur:
+
+```dotenv
+DB_CONNECTION=sqlite
+QUEUE_CONNECTION=database
+CACHE_STORE=database
+```
+
+```bash
+touch database/database.sqlite
+php artisan migrate
+php artisan db:seed
+```
+
 Varsayılan lokal admin:
 
 ```text
