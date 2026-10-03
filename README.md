@@ -106,10 +106,13 @@ php artisan db:seed
 Alternatif olarak repo içindeki yardımcı Composer komutlarını kullanabilirsin:
 
 ```bash
+docker compose up -d mysql redis
 composer setup
 composer dev
 composer test
 ```
+
+Varsayılan `.env.example` MySQL ve Redis kullandığı için ilk `composer setup` çalıştırmasından önce Docker servislerini başlat. SQLite kurulumunu tercih ediyorsan aşağıdaki SQLite ayarlarını uyguladıktan sonra `composer setup` komutunu çalıştır.
 
 `composer setup`, bağımlılık kurulumunu, `.env` kopyalamayı, anahtar üretimini, migrasyonları ve frontend build adımını tek seferde çalıştırır.
 `composer dev` Laravel sunucusu, `php artisan queue:listen --tries=1 --timeout=0`, Pail log akışı ve Vite'i birlikte açar. Bu sayede geliştirme sırasında arka plan işleri ve log akışı tek terminal grubunda izlenebilir.
