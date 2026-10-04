@@ -139,7 +139,7 @@ Email: admin@example.com
 Password: password
 ```
 
-### Frontend assetleri
+### Frontend varlıkları
 
 `composer setup` frontend bağımlılıklarını da kurup build aldığı için, normal Laravel kurulumu için aşağıdaki adımlar ayrıca gerekmez. Yalnızca frontend tarafında çalışıyorsan veya `composer setup` kullanmadıysan bunları çalıştır:
 
