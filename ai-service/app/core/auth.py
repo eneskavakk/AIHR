@@ -1,3 +1,5 @@
+import secrets
+
 from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
@@ -27,7 +29,7 @@ def verify_api_token(
             headers={"WWW-Authenticate": "Bearer"},
         )
 
-    if credentials.credentials != configured_token:
+    if not secrets.compare_digest(credentials.credentials, configured_token):
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Invalid authentication token.",
