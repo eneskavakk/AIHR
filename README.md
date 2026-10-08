@@ -235,16 +235,16 @@ source .venv/bin/activate
 uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
 ```
 
-Queue worker:
-
-```bash
-php artisan queue:work database --timeout=300 --tries=1
-```
-
-Redis queue kullanıyorsanız:
+Redis queue worker (varsayılan):
 
 ```bash
 php artisan queue:work redis --timeout=300 --tries=1
+```
+
+SQLite ile database queue kullanıyorsan:
+
+```bash
+php artisan queue:work database --timeout=300 --tries=1
 ```
 
 MySQL ve Redis'i Docker ile başlatmak için:
