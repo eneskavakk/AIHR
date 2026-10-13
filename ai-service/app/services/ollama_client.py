@@ -29,11 +29,17 @@ class OllamaClient:
         except httpx.HTTPError as exc:
             raise OllamaError(str(exc)) from exc
 
-        payload = response.json()
+        try:
+            payload = response.json()
+        except ValueError as exc:
+            raise OllamaError("Ollama returned an invalid JSON response.") from exc
+
+        if not isinstance(payload, dict):
+            raise OllamaError("Ollama returned an invalid JSON response.")
+
         generated = payload.get("response")
 
         if not isinstance(generated, str) or generated.strip() == "":
             raise OllamaError("Ollama returned an empty response.")
 
         return generated
-
