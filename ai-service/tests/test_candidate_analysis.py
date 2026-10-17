@@ -66,18 +66,19 @@ class CandidateAnalysisServiceTest(unittest.TestCase):
         self.assertEqual(response.attempt_count, 1)
 
     def test_invalid_json_is_repaired(self) -> None:
+        repaired_response = json.dumps(VALID_RESULT, ensure_ascii=False)
         client = FakeOllamaClient([
             "```json\n{\"aday_adi\": \"Eksik\"",
-            json.dumps(VALID_RESULT, ensure_ascii=False),
+            repaired_response,
         ])
 
         response = CandidateAnalysisService(client).analyze(make_request())
 
         self.assertTrue(response.success)
         self.assertEqual(response.result.aday_adi, "Melek Su Kavak")
+        self.assertEqual(response.raw_response, repaired_response)
         self.assertEqual(len(client.prompts), 2)
 
 
 if __name__ == "__main__":
     unittest.main()
-

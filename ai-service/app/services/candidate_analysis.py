@@ -48,7 +48,7 @@ class CandidateAnalysisService:
 
                     return AnalyzeCandidateResponse(
                         result=result,
-                        raw_response=raw_response,
+                        raw_response=repaired_response,
                         model=settings.ollama_model,
                         attempt_count=attempt,
                         prompt_version=PROMPT_VERSION,
@@ -59,4 +59,3 @@ class CandidateAnalysisService:
         raise CandidateAnalysisError(
             f"Model response could not be validated after retries: {validation_error}",
         )
-
