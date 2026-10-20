@@ -3,9 +3,10 @@
 namespace Tests\Feature;
 
 use App\Actions\Candidates\AnalyzeCandidateAction;
+use App\Actions\Candidates\ParseCandidateCvAction;
 use App\Enums\AnalysisStatus;
 use App\Enums\CandidateLevel;
-use App\Jobs\AnalyzeCandidateJob;
+use App\Jobs\ProcessCandidateAnalysisJob;
 use App\Models\CandidateCv;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Http;
@@ -123,7 +124,10 @@ class Sprint04CandidateAnalysisTest extends TestCase
         ]);
         $analysis = $candidateCv->analysis;
 
-        (new AnalyzeCandidateJob($analysis->id))->handle(app(AnalyzeCandidateAction::class));
+        (new ProcessCandidateAnalysisJob($analysis->id))->handle(
+            app(ParseCandidateCvAction::class),
+            app(AnalyzeCandidateAction::class),
+        );
 
         $analysis->refresh();
 
