@@ -173,12 +173,6 @@ Servisin ayrıntılı kurulum ve API örnekleri için [ai-service/README.md](ai-
 ollama pull qwen2.5:7b
 ```
 
-Opsiyonel fallback:
-
-```bash
-ollama pull llama3.1:8b
-```
-
 ## Ortam Değişkenleri
 
 Gerçek değerler `.env` ve `ai-service/.env` dosyalarında tutulmalıdır. Bu dosyalar git'e dahil edilmez.
@@ -201,7 +195,6 @@ FastAPI tarafında önemli ayarlar:
 ```dotenv
 AI_SERVICE_OLLAMA_BASE_URL=http://127.0.0.1:11434
 AI_SERVICE_OLLAMA_MODEL=qwen2.5:7b
-AI_SERVICE_OLLAMA_FALLBACK_MODEL=llama3.1:8b
 AI_SERVICE_OLLAMA_TIMEOUT_SECONDS=120
 AI_SERVICE_ANALYSIS_RETRY_COUNT=1
 AI_SERVICE_API_TOKEN=
