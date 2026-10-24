@@ -43,6 +43,13 @@ class ScoreCategory(BaseModel):
             return ""
         return str(value).strip()
 
+    @model_validator(mode="after")
+    def validate_score_does_not_exceed_maximum(self) -> "ScoreCategory":
+        if self.puan > self.maksimum:
+            raise ValueError("puan cannot exceed maksimum")
+
+        return self
+
 
 class ScoreBreakdown(BaseModel):
     teknik_yetenekler: ScoreCategory = Field(default_factory=lambda: ScoreCategory(puan=0, maksimum=35))

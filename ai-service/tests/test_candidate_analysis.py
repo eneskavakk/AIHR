@@ -1,7 +1,9 @@
 import json
 import unittest
 
-from app.schemas.analysis import AnalyzeCandidateRequest
+from pydantic import ValidationError
+
+from app.schemas.analysis import AnalyzeCandidateRequest, ScoreCategory
 from app.services.candidate_analysis import CandidateAnalysisService
 
 
@@ -56,6 +58,10 @@ def make_request() -> AnalyzeCandidateRequest:
 
 
 class CandidateAnalysisServiceTest(unittest.TestCase):
+    def test_score_category_rejects_score_above_maximum(self) -> None:
+        with self.assertRaises(ValidationError):
+            ScoreCategory(puan=36, maksimum=35)
+
     def test_valid_json_response_is_validated(self) -> None:
         client = FakeOllamaClient([json.dumps(VALID_RESULT, ensure_ascii=False)])
         response = CandidateAnalysisService(client).analyze(make_request())
