@@ -59,6 +59,25 @@ class ScoreBreakdown(BaseModel):
     takim_calismasi: ScoreCategory = Field(default_factory=lambda: ScoreCategory(puan=0, maksimum=10))
     cloud_deneyimi: ScoreCategory = Field(default_factory=lambda: ScoreCategory(puan=0, maksimum=10))
 
+    @model_validator(mode="after")
+    def validate_category_maximums(self) -> "ScoreBreakdown":
+        expected_maximums = {
+            "teknik_yetenekler": 35,
+            "backend_deneyimi": 20,
+            "database_bilgisi": 15,
+            "devops_ve_queue": 10,
+            "takim_calismasi": 10,
+            "cloud_deneyimi": 10,
+        }
+
+        for category, expected_maximum in expected_maximums.items():
+            if getattr(self, category).maksimum != expected_maximum:
+                raise ValueError(
+                    f"{category}.maksimum must be {expected_maximum}",
+                )
+
+        return self
+
 
 # --- Skill analysis models ---
 
