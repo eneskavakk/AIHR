@@ -7,10 +7,11 @@ from app.main import app
 
 
 def make_pdf(text: str) -> bytes:
-    document = fitz.open()
-    page = document.new_page()
-    page.insert_text((72, 72), text)
-    return document.tobytes()
+    with fitz.open() as document:
+        page = document.new_page()
+        page.insert_text((72, 72), text)
+
+        return document.tobytes()
 
 
 class ParseCvTest(unittest.TestCase):
