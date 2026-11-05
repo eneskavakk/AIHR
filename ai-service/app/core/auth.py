@@ -1,6 +1,6 @@
 import secrets
 
-from fastapi import Depends, HTTPException, Request, status
+from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
 from app.core.settings import settings
@@ -9,7 +9,6 @@ security = HTTPBearer(auto_error=False)
 
 
 def verify_api_token(
-    request: Request,
     credentials: HTTPAuthorizationCredentials | None = Depends(security),
 ) -> None:
     """
