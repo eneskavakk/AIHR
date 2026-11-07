@@ -31,6 +31,14 @@ Laravel istemcisiyle birlikte kullanıyorsan, buradaki `AI_SERVICE_API_TOKEN` de
 uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
 ```
 
+## Testler
+
+Sanal ortam etkinken `ai-service` dizininden testleri çalıştır:
+
+```bash
+python -m pytest
+```
+
 ## Health Check
 
 ```bash
