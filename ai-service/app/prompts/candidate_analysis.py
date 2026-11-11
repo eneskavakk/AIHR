@@ -1,6 +1,6 @@
 import json
 
-PROMPT_VERSION = "candidate-analysis-v4"
+PROMPT_VERSION = "candidate-analysis-v5"
 
 OUTPUT_SCHEMA = {
     "aday_adi": "",
@@ -234,7 +234,7 @@ SADECE AŞAĞIDAKİ JSON FORMATINDA CEVAP VER
 
 def build_json_repair_prompt(raw_response: str, validation_error: str) -> str:
     return f"""Aşağıdaki LLM yanıtı geçersiz veya şemaya uymuyor.
-Sadece duzeltilmis valid JSON dondur. Markdown veya aciklama yazma.
+Sadece düzeltilmiş geçerli JSON döndür. Markdown veya açıklama yazma.
 
 Zorunlu JSON semasi:
 {json.dumps(OUTPUT_SCHEMA, ensure_ascii=False, indent=2)}

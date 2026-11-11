@@ -3,6 +3,7 @@ import unittest
 
 from pydantic import ValidationError
 
+from app.prompts.candidate_analysis import PROMPT_VERSION
 from app.schemas.analysis import AnalyzeCandidateRequest, ScoreBreakdown, ScoreCategory
 from app.services.candidate_analysis import CandidateAnalysisService
 
@@ -76,6 +77,7 @@ class CandidateAnalysisServiceTest(unittest.TestCase):
         self.assertEqual(response.result.uygunluk_skoru, 72)
         self.assertEqual(response.result.aday_seviyesi, "Strong Match")
         self.assertEqual(response.attempt_count, 1)
+        self.assertEqual(response.prompt_version, PROMPT_VERSION)
 
     def test_invalid_json_is_repaired(self) -> None:
         repaired_response = json.dumps(VALID_RESULT, ensure_ascii=False)
