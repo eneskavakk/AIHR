@@ -16,12 +16,14 @@ cp .env.example .env
 
 Servis, `AI_SERVICE_` ön ekiyle okunan şu ayarları kullanır:
 
+- `AI_SERVICE_DEBUG=true`
 - `AI_SERVICE_OLLAMA_BASE_URL=http://127.0.0.1:11434`
 - `AI_SERVICE_OLLAMA_MODEL=qwen2.5:7b`
 - `AI_SERVICE_OLLAMA_TIMEOUT_SECONDS=120`
 - `AI_SERVICE_ANALYSIS_RETRY_COUNT=1`
 - `AI_SERVICE_API_TOKEN=`
 
+`AI_SERVICE_DEBUG=false` ayarı üretimde `/docs` ve `/redoc` endpoint'lerini kapatır.
 `health` endpoint'i açıktır; `AI_SERVICE_API_TOKEN` tanımlıysa `parse-cv` ve `analyze-candidate` endpoint'leri Bearer token ister, boş bırakılırsa geliştirme modunda açık kalır.
 Laravel istemcisiyle birlikte kullanıyorsan, buradaki `AI_SERVICE_API_TOKEN` değeri Laravel tarafındaki `AI_SERVICE_TOKEN` ile aynı olmalıdır.
 
