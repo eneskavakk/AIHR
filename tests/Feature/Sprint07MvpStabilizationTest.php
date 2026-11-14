@@ -10,9 +10,7 @@ use App\Models\CandidateCv;
 use App\Models\JobPosting;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Queue;
-use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class Sprint07MvpStabilizationTest extends TestCase
@@ -59,11 +57,9 @@ class Sprint07MvpStabilizationTest extends TestCase
 
     public function test_cv_upload_accepts_pdf(): void
     {
-        Storage::fake('local');
         Queue::fake();
 
         $posting = JobPosting::factory()->create();
-        $file = UploadedFile::fake()->create('cv.pdf', 100, 'application/pdf');
 
         $cv = CandidateCv::create([
             'job_posting_id' => $posting->id,
