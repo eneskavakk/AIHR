@@ -16,7 +16,7 @@ class PdfParseResult:
 
 class PdfParser:
     def extract_text(self, pdf_bytes: bytes) -> PdfParseResult:
-        if not pdf_bytes.startswith(b"%PDF"):
+        if b"%PDF-" not in pdf_bytes[:1024]:
             raise PdfParsingError("Uploaded file is not a valid PDF document.")
 
         try:

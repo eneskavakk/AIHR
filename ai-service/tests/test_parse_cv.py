@@ -35,6 +35,17 @@ class ParseCvTest(unittest.TestCase):
         self.assertIn("Python Developer", payload["cleaned_text"])
         self.assertEqual(payload["page_count"], 1)
 
+    def test_parse_cv_accepts_pdf_with_leading_bytes(self) -> None:
+        pdf_bytes = b"generated-by-scanner\n" + make_pdf("Ahmet Yilmaz")
+
+        response = self.client.post(
+            "/parse-cv",
+            files={"file": ("cv.pdf", pdf_bytes, "application/pdf")},
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("Ahmet Yilmaz", response.json()["cleaned_text"])
+
     def test_parse_cv_rejects_non_pdf_uploads(self) -> None:
         response = self.client.post(
             "/parse-cv",
