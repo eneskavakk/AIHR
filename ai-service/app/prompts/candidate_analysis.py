@@ -1,6 +1,6 @@
 import json
 
-PROMPT_VERSION = "candidate-analysis-v5"
+PROMPT_VERSION = "candidate-analysis-v6"
 
 OUTPUT_SCHEMA = {
     "aday_adi": "",
@@ -163,6 +163,17 @@ Skor verirken öncelik sırası:
 8. Education relevance
 
 Skorlar rastgele verilmemelidir.
+
+Puan kırılımındaki kategori ağırlıkları:
+
+- teknik_yetenekler: en fazla 35
+- backend_deneyimi: en fazla 20
+- database_bilgisi: en fazla 15
+- devops_ve_queue: en fazla 10
+- takim_calismasi: en fazla 10
+- cloud_deneyimi: en fazla 10
+
+Kategori puanlarının toplamı "uygunluk_skoru" ile birebir aynı olmalıdır.
 
 ────────────────────
 EĞİTİM KURALI

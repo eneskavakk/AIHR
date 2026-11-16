@@ -3,7 +3,7 @@ import unittest
 
 from pydantic import ValidationError
 
-from app.prompts.candidate_analysis import PROMPT_VERSION
+from app.prompts.candidate_analysis import PROMPT_VERSION, build_candidate_analysis_prompt
 from app.schemas.analysis import AnalyzeCandidateRequest, ScoreBreakdown, ScoreCategory
 from app.services.candidate_analysis import CandidateAnalysisService
 
@@ -59,6 +59,14 @@ def make_request() -> AnalyzeCandidateRequest:
 
 
 class CandidateAnalysisServiceTest(unittest.TestCase):
+    def test_prompt_requires_breakdown_to_match_total_score(self) -> None:
+        prompt = build_candidate_analysis_prompt(make_request().model_dump())
+
+        self.assertIn(
+            'Kategori puanlarının toplamı "uygunluk_skoru" ile birebir aynı olmalıdır.',
+            prompt,
+        )
+
     def test_score_category_rejects_score_above_maximum(self) -> None:
         with self.assertRaises(ValidationError):
             ScoreCategory(puan=36, maksimum=35)
